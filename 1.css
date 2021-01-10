@@ -99,14 +99,14 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-dark-grey);
-  align-items: center; /* 박스를 수직으로 중간에 정렬하고 싶을 때 */
+  align-items: center;
   color: var(--color-white);
   padding: 16px;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold); /* 글짜 굵기 */
+  font-weight: var(--weight-semi-bold);
 }
 
 .navbar__menu {
@@ -117,12 +117,11 @@ p {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-  /* 마우스를 위에 올려놨을 때 손가락모양으로 바뀜 */
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
-  border: 1px solid white;
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover {
@@ -136,46 +135,4 @@ p {
   font-size: 24px;
   color: var(--color-white);
   display: none;
-}
-
-/* Home */
-#home {
-  background: url(/image/home-backgroound.png) center/cover;
-  /* 사진 중앙으로 위치하고 반응형이 되도록 cover사용 */
-  padding: 40px;
-  text-align: center; /* 모든 아이들을 중앙에 배치 */
-}
-
-.home__avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid var(--color-light-white);
-}
-
-.home__title,
-.home__description {
-  color: var(--color-white);
-}
-
-.home__contact {
-  color: var(--color-white);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-
-/* Section common(공통된 텍스트) */
-.section {
-  text-align: center;
-  padding: 50px;
-  margin: auto;
-}
-
-.section__container {
-  max-width: 1200px; /* 보통 1000~1200px이 데스크탑에서 보기편한 사이즈이다. */
-  margin: auto;
 }

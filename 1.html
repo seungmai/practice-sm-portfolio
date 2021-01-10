@@ -10,37 +10,42 @@
     <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1.css">
     <script src="main.js" defer></script>
 </head>
 </head>
 <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navrbar__logo">
+        <div class="navbar__logo">
             <i class="fab fa-apple"></i>
             <a href="#">Seungmin</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__item">Home</li>
-            <li class="navbar__item">About</li>
-            <li class="navbar__item">Skills</li>
-            <li class="navbar__item">My work</li>
-            <li class="navbar__item">Testimonial</li>
-            <li class="navbar__item">Contact</li>
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonial</li>
+            <li class="navbar__menu__item">Contact</li>
         </ul>
+
+            <!-- Toggle button-->
+    <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+    </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
         <img src="/image/profile.jpeg" alt="Seungmin's profile photo" class="home__avatar">
-        <h1 class="home_title">Hello,<br>I'm Seungmin</h1>
+        <h1 class="home__title">Hello,<br>I'm Seungmin</h1>
         <h2 class="home__description">I'm a person who tries to be the best developer.</h2>
         <button class="home__contact">CONTACT ME</button>
     </section>
 
     <!-- About me -->
-    <section id="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor adipisci ullam voluptatibus natus impedit iste, soluta quod voluptas, nostrum error facere reprehenderit, cumque iure dolores atque ipsa pariatur quia ipsam!
@@ -50,9 +55,9 @@
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     Front-end
-                </div>
+                </h2>
                 <div class="major__description">
                     HTML, CSS, JavaScript, TypeScript,<br /> React, Vue, Web APIs
                 </div>
@@ -61,9 +66,9 @@
                 <div class="major__icon">
                     <i class="fas fa-mobile"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     Mobile
-                </div>
+                </h2>
                 <div class="major__description">
                     Android, iOS, React Native, Flutter,<br /> Java, Swift, Kotlin
                 </div>
@@ -72,9 +77,9 @@
                 <div class="major__icon">
                     <i class="fas fa-server"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     Back-end
-                </div>
+                </h2>
                 <div class="major__description">
                     Java, JavaScript, Go, NodeJS,<br /> Rest APIs, GraphGL
                 </div>
@@ -83,28 +88,33 @@
         <div class="about__jobs">
             <div class="job">
                 <img src="/image/favicon.png" alt="apple" class="job__logo">
-                <p class="job__name">
-                    Currently working at apple as Software Engieer
-                </p>
-                <p class="job__period">
-                    2019 Sept - Until now
-                </p>
+                <div class="job__description">
+                    <p class="job__name">
+                        Currently working at apple as Software Engieer
+                    </p>
+                    <p class="job__period">
+                        2019 Sept - Until now
+                    </p>
+                </div>
             </div>
             <div class="job">
                 <img src="/image/favicon.png" alt="apple" class="job__logo">
-                <p class="job__name">
-                    Currently working at apple as Software Engieer
-                </p>
-                <p class="job__period">
-                    2019 Sept - Until now
-                </p>
+                <div class="job__description">
+                    <p class="job__name">
+                        Currently working at apple as Software Engieer
+                    </p>
+                    <p class="job__period">
+                        2019 Sept - Until now
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-        <h1>Skills</h1>
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
         <h3>Skills & Attributes</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid natus laborum, architecto rerum doloribus quas aut blanditiis hic reprehenderit. Soluta quibusdam beatae praesentium veniam harum, culpa sapiente pariatur enim?
@@ -120,7 +130,7 @@
                         <span>99%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value">
+                        <div class="skill__value" style="width: 99%;">
                         </div>
                     </div>
                 </div>
@@ -130,7 +140,7 @@
                         <span>90%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 90%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -139,16 +149,16 @@
                         <span>90%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 90%;"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill__description">
                         <span>TYPESCRIPT</span>
-                        <span>90%</span>
+                        <span>80%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -157,7 +167,7 @@
                         <span>88%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 88%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -166,12 +176,12 @@
                         <span>77%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 77%;"></div>
                     </div>
                 </div>
             </div>
             <div class="skillset__right">
-                <div class="tolls">
+                <div class="tools">
                     <h3 class="skillset__title">
                         Tools
                     </h3>
@@ -195,23 +205,25 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- My work -->
-    <section id="work">
-        <h1>My work</h1>
+    <section id="work" class="section">
+        <div class="section__container">
+            <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn">
+            <button class="category__btn active">
                 All <span class="category__count">8</span>
             </button>
-            <button class="work__categories">
+            <button class="category__btn">
                 Front-end <span class="category__count">3</span>
             </button>
-            <button class="work__categories">
+            <button class="category__btn">
                 Back-end <span class="category__count">3</span>
             </button>
-            <button class="work__categories">
+            <button class="category__btn">
                 Mobile <span class="category__count">2</span>
             </button>
         </div>
@@ -226,7 +238,7 @@
                 </div>
             </a>
             <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project2.png" alt="2" class="project_img">
+                <img src="/image/projects/project2.png" alt="2" class="project__img">
                 <div class="project__description">
                     <h3>Github Site</h3>
                     <span>
@@ -289,14 +301,16 @@
                 </div>
             </a>
         </div>
+        </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
-        <h1>testimonials</h1>
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>testimonials</h1>
         <h3>see what they say about me</h3>
         <div class="testimonials">
-            <div class="testimonal">
+            <div class="testimonial">
                 <img src="/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar">
                 <div class="testimonial__speech-bubble">
                     <p>
@@ -308,8 +322,7 @@
                     </p>
                 </div>
             </div>
-            <div class="testimonal">
-                <img src="/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar">
+            <div class="testimonial">
                 <div class="testimonial__speech-bubble">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis nam et molestias excepturi illum dignissimos molestiae incidunt vel suscipit voluptatem dolores nostrum quisquam a voluptates, est, sunt perferendis! Commodi.
@@ -319,12 +332,14 @@
                         /Apple
                     </p>
                 </div>
+                <img src="/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar">
             </div>
+        </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="contact__title">
             Let's talk
         </h1>
