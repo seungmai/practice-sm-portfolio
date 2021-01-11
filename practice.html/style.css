@@ -131,6 +131,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
+  /* 앞쪽에다 배치 */
   top: 24px;
   right: 32px;
   font-size: 24px;
@@ -191,6 +192,7 @@ p {
   width: 170px;
   height: 170px;
   line-height: 170px;
+  /* 가운데 배치 */
   font-size: 70px;
   margin: auto;
   color: var(--color-dark-grey);
@@ -332,6 +334,7 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
+  /* 50%한 것을 동그랗게 해줌 */
   position: relative;
   top: -20px;
   left: 4px;
@@ -402,8 +405,7 @@ p {
 #testimonials {
   background-color: var(--color-light-white);
 }
-
-.testimonials {
+bac .testimonials {
   margin: 40px;
 }
 
