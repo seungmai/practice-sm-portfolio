@@ -179,6 +179,7 @@ p {
 .section__container {
   max-width: 1200px; /* 보통 1000~1200px이 데스크탑에서 보기편한 사이즈이다. */
   margin: auto;
+  /* 중앙 배치 */
 }
 
 /* About */
@@ -427,8 +428,7 @@ bac .testimonials {
 .testimonial__avatar:nth-child(even) {
   margin-left: 40px;
 }
-
-.testimonial__speech-bubble {
+s .testimonial__speech-bubble {
   padding: 18px;
   background-color: var(--color-white);
   border: var(--size-border-radius);

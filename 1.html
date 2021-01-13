@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seungmin's Portfolio</title>
-    <meta name="description" content="Seungmin's Portfolio"> 
-    <meta name="author" content="Seungmin">
+    <meta name="description" content="Seungmin's Portfolio">
+    <meta name="author" content="Lee Seung Min">
     <link rel="icon" type="image/png" href="/image/lee.png">
     <script src="https://kit.fontawesome.com/e00bf7e164.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-apple-alt"></i>
             <a href="#">Seungmin</a>
         </div>
         <ul class="navbar__menu">
@@ -28,16 +28,21 @@
             <li class="navbar__menu__item">Testimonial</li>
             <li class="navbar__menu__item">Contact</li>
         </ul>
+
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
-        <img src="/image/profile.jpeg" alt="Seungmin's portfolio profile photo" class="home__avatar">
+        <img src="/image/profile.jpeg" alt="Seungmin portfolio profile photo" class="home__avatar">
         <h1 class="home__title">
             Hello,<br />I'm Seungmin
         </h1>
         <h2 class="home__description">
-            A Software Engineer currently residing in Sydney, Australia.
+            I'm a person who tries to be the best developer.
         </h2>
         <button class="home__contact">
             CONTACT ME
@@ -45,172 +50,320 @@
     </section>
 
     <!-- About me -->
-    <section id="about" class="section section__container">
-        <h1>About me</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe doloremque architecto, nobis doloribus quia placeat accusamus ratione magni ad voluptatum, voluptatem quam harum deserunt impedit, nesciunt aliquid laborum aperiam ea.
-        </p>
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
+    <section id="about" class="section">
+        <div class="section__container">
+            <h1>About me</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt itaque optio deleniti id maiores iste, voluptatem rerum tempora dolore mollitia minima aliquam dolor cum eum vero asperiores soluta officiis?
+            </p>
+            <div class="about__majors">
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Front-end
+                    </h2>
+                    <div class="major__description">
+                        HTML, CSS, JavaScript, TypeScript,<br /> React, Vue, Web APIs
+                    </div>
                 </div>
-                <h2 class="major__title">
-                    Front-end
-                </h2>
-                <div class="major__description">
-                    HTML, CSS, JavaScript, TypeScript,<br />
-                    React, Vue, Web APIs
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Mobile
+                    </h2>
+                    <div class="major__description">
+                        Android, iOS, React Native, Flutter,<br />Java, Swift, Kotlin
+                    </div>
                 </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-mobile"></i>
-                </div>
-                <h2 class="major__title">
-                    Mobile
-                </h2>
-                <div class="major__description">
-                    Android, iOS, React Native, Flutter,<br />Java, Swift, Kotlin
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h2 class="major__title">
-                    Back-end
-                </h2>
-                <div class="major__descrition">
-                    Java, JavaScript, Go, NodeJS,<br />
-                    Rest APIs, GraphGL
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Back-end
+                    </h2>
+                    <div class="major__description">
+                       Java, JavaScript, Go, NodeJS,<br />Rest APIs, GraphGL
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="about__jobs">
+        <div class="major__jobs">
             <div class="job">
                 <img src="/image/icon.png" alt="apple" class="job__logo">
                 <div class="job__description">
-                    <p class="job__name">Currently working at Apple as Software Engineer</p>
-                    <p class="job__period">2019 Sept - Until now</p>
+                    <p class="job__name">
+                        Currently working at Samsung as Software Engineer
+                    </p>
+                    <p class="job__period">
+                        2019 Sept - Until now
+                    </p>
                 </div>
             </div>
             <div class="job">
                 <img src="/image/icon.png" alt="apple" class="job__logo">
                 <div class="job__description">
-                    <p class="job__name">Currently working at Apple as Software Engineer</p>
-                    <p class="job__period">2019 Sept - Until now</p>
+                    <p class="job__name">
+                        Currently working at Samsung as Software Engineer
+                    </p>
+                    <p class="job__period">
+                        2019 Sept - Until now
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skill -->
+    <!-- Skills -->
     <section id="skills" class="section">
         <div class="section__container">
-            <h1>Skills</h1>
-            <h3>Skills & Attributes</h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam illo aliquid praesentium at repudiandae aspernatur eos eum dolor voluptate sunt, dolorum velit iure quos, ipsam quibusdam autem facilis dignissimos exercitationem.
-            </p>
-            <div class="skillset">
-                <div class="skillset__left">
+        <h1>Skills</h1>
+        <h3>Skills & Attributes</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid natus laborum, architecto rerum doloribus quas aut blanditiis hic reprehenderit. Soluta quibusdam beatae praesentium veniam harum, culpa sapiente pariatur enim?
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">
+                    Skills
+                </h3>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 99%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>JAVASCRIPT</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>TYPESCRIPT</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>REACT</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>NODEJS</span>
+                        <span>77%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 77%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
                     <h3 class="skillset__title">
-                        Skills
+                        Tools
                     </h3>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>HTML</span>
-                            <span>99%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 99%;">
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="tools__list">
+                        <li><span>Android development tools</span></li>
+                        <li><span>iOS development tools</span></li>
+                        <li><span>Sublime Text with Plug-ings</span></li>
+                        <li><span>Visual Studio</span></li>
+                        <li><span>Team Foundation</span></li>
+                        <li><span>Adobe Programs</span></li>
+                        <li><span>Sketch app</span></li>
+                    </ul>
                 </div>
-                <div class="skillset__right">
-                    <div class="tools">
-                        <h3 class="skillset__title">Toosl</h3>
-                        <ul class="tools__list">
-                            <li><span>1</span></li>
-                            <li><span>2</span></li>
-                            <li><span>3</span></li>
-                            <li><span>4</span></li>
-                            <li><span>5</span></li>
-                        </ul>
-                    </div>
-                    <div class="etc">
-                        <ul class="etc__list">
-                            <li><span>1</span></li>
-                            <li><span>2</span></li>
-                            <li><span>3</span></li>
-                        </ul>
-                    </div>
+                <div class="etc">
+                    <h3 class="skillset__title">
+                        Etc
+                    </h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                    </ul>
                 </div>
             </div>
-    </section>
-
-    <!-- work -->
-    <section id="work" class="section">
-        <div class="section__container">
-            <h1>1</h1>
-            <h3>1</h3>
-            <div class="work__categories">
-                <button class="category__btn active">all<span class="category__count">8</span></button>
-                <button><span></span></button>
-                <button><span></span></button>
-                <button><span></span></button>
-            </div>
-            <div class="work__projects">
-                <a href="#" alt="1" class="project" target="_blank">
-                <img src="/image/projects/project1.png" alt="1" class="project__img">
-                <div class="project__description">
-                    <h3></h3>
-                    <span></span>
-                </div>
-                </a>
-                <a href="#" class="project" target="_blank">
-                    <img src="" alt="" class="project__img">
-                    <div class="project__description">
-                        <h3></h3>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+   <!-- My work -->
+    <section id="work" class="section">
+    <div class="section__container">
+    <h1>My work</h1>
+    <h3>Projects</h3>
+    <div class="work__categories">
+        <button class="category__btn active">
+            All <span class="category__count">8</span>
+        </button>
+        <button class="category__btn">
+            Front-end <span class="category__count">3</span>
+        </button>
+        <button class="category__btn">
+            Back-end <span class="category__count">3</span>
+        </button>
+        <button class="category__btn">
+            Mobile <span class="category__count">2</span>
+        </button>
+    </div>
+    <div class="work__projects">
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project1.png" alt="1" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project2.png" alt="2" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project3.png" alt="3" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project4.png" alt="4" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project5.png" alt="5" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project6.png" alt="6" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project7.png" alt="7" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project1.png" alt="1" class="project__img">
+            <div class="project__description">
+                <h3>Github</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+    </div>
+    </div>
+    </section>
+
+     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="section__container">
-            <h1>1</h1>
-            <h3>1</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="1" alt="1" class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p>1</p>
-                        <p class="name"><a href="">1</a>/1</p>
-                    </div>
+        <h1>testimonials</h1>
+        <h3>see what they say about me</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar">
+                <div class="testimonial__speech-bubble">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quam praesentium eum, enim temporibus, amet minima voluptates corrupti quod minus neque quas repellendus vitae tempore molestias ut adipisci alias fugit!
+                    </p>
+                    <p class="name">
+                        <a href="">Seungmin</a>
+                        /Apple
+                    </p>
                 </div>
             </div>
+            <div class="testimonial">
+                <div class="testimonial__speech-bubble">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis nam et molestias excepturi illum dignissimos molestiae incidunt vel suscipit voluptatem dolores nostrum quisquam a voluptates, est, sunt perferendis! Commodi.
+                    </p>
+                    <p class="name">
+                        <a href="">Seungmin</a>
+                        /Apple
+                    </p>
+                </div>
+                <img src="/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar">
+            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Contact -->
+     <!-- Contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">1</h1>
-        <h2 class="contact__email">1</h2>
+        <h1 class="contact__title">
+            Let's talk
+        </h1>
+        <h2 class="contact__email">
+            iseungmin044@gamil.com
+        </h2>
         <div class="contact__links">
-            <a href="" target="_blank">
+            <a href="https://github.com/seungmai" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="" target="_blank">
+            <a href="https://github.com/seungmai" target="_blank">
                 <i class="fa fa-linkedin-square"></i>
             </a>
         </div>
-        <p class="contact__rights">1</p>
+        <p class="contact__rights">
+            2020 Dream Coding Seungmin - All right reserved
+        </p>
     </section>
 </body>
 </html>
