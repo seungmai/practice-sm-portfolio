@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seungmin's portfolio</title>
-    <meta name="description" content="Portfolio for world-renowned software engineer Seungmin">
-    <meta name="author" content="Seungmin">
-    <link rel="icon" type="image/png" href="/image/favicon.png">
-    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <title>Seungmin's Portfolio</title>
+    <meta name="description" content="Seungmin's Portfolio">
+    <meta name="author" content="Lee Seung Min">
+    <link rel="icon" type="image/png" href="/image/lee.png">
+    <script src="https://kit.fontawesome.com/e00bf7e164.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-</head>
 <body>
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fab fa-apple"></i>
+            <i class="fas fa-apple-alt"></i>
             <a href="#">Seungmin</a>
         </div>
         <ul class="navbar__menu">
@@ -30,67 +29,75 @@
             <li class="navbar__menu__item">Contact</li>
         </ul>
 
-            <!-- Toggle button-->
-    <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"></i>
-    </button>
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
-        <img src="/image/profile.jpeg" alt="Seungmin's profile photo" class="home__avatar">
-        <h1 class="home__title">Hello,<br>I'm Seungmin</h1>
-        <h2 class="home__description">I'm a person who tries to be the best developer.</h2>
-        <button class="home__contact">CONTACT ME</button>
+        <img src="/image/profile.jpeg" alt="Seungmin portfolio profile photo" class="home__avatar">
+        <h1 class="home__title">
+            Hello,<br />I'm Seungmin
+        </h1>
+        <h2 class="home__description">
+            I'm a person who tries to be the best developer.
+        </h2>
+        <button class="home__contact">
+            CONTACT ME
+        </button>
     </section>
 
     <!-- About me -->
-    <section id="about" class="section section__container">
-        <h1>About me</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor adipisci ullam voluptatibus natus impedit iste, soluta quod voluptas, nostrum error facere reprehenderit, cumque iure dolores atque ipsa pariatur quia ipsam!
-        </p>
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
+    <section id="about" class="section">
+        <div class="section__container">
+            <h1>About me</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt itaque optio deleniti id maiores iste, voluptatem rerum tempora dolore mollitia minima aliquam dolor cum eum vero asperiores soluta officiis?
+            </p>
+            <div class="about__majors">
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Front-end
+                    </h2>
+                    <div class="major__description">
+                        HTML, CSS, JavaScript, TypeScript,<br /> React, Vue, Web APIs
+                    </div>
                 </div>
-                <h2 class="major__title">
-                    Front-end
-                </h2>
-                <div class="major__description">
-                    HTML, CSS, JavaScript, TypeScript,<br /> React, Vue, Web APIs
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Mobile
+                    </h2>
+                    <div class="major__description">
+                        Android, iOS, React Native, Flutter,<br />Java, Swift, Kotlin
+                    </div>
                 </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-mobile"></i>
-                </div>
-                <h2 class="major__title">
-                    Mobile
-                </h2>
-                <div class="major__description">
-                    Android, iOS, React Native, Flutter,<br /> Java, Swift, Kotlin
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h2 class="major__title">
-                    Back-end
-                </h2>
-                <div class="major__description">
-                    Java, JavaScript, Go, NodeJS,<br /> Rest APIs, GraphGL
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h2 class="major__title">
+                        Back-end
+                    </h2>
+                    <div class="major__description">
+                       Java, JavaScript, Go, NodeJS,<br />Rest APIs, GraphGL
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="about__jobs">
+        <div class="major__jobs">
             <div class="job">
                 <img src="/image/icon.png" alt="apple" class="job__logo">
                 <div class="job__description">
                     <p class="job__name">
-                        Currently working at apple as Software Engieer
+                        Currently working at Samsung as Software Engineer
                     </p>
                     <p class="job__period">
                         2019 Sept - Until now
@@ -101,7 +108,7 @@
                 <img src="/image/icon.png" alt="apple" class="job__logo">
                 <div class="job__description">
                     <p class="job__name">
-                        Currently working at apple as Software Engieer
+                        Currently working at Samsung as Software Engineer
                     </p>
                     <p class="job__period">
                         2019 Sept - Until now
@@ -114,7 +121,7 @@
     <!-- Skills -->
     <section id="skills" class="section">
         <div class="section__container">
-            <h1>Skills</h1>
+        <h1>Skills</h1>
         <h3>Skills & Attributes</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid natus laborum, architecto rerum doloribus quas aut blanditiis hic reprehenderit. Soluta quibusdam beatae praesentium veniam harum, culpa sapiente pariatur enim?
@@ -186,10 +193,12 @@
                         Tools
                     </h3>
                     <ul class="tools__list">
-                        <li><span>Visual Studeo Code</span></li>
-                        <li><span>IntelliJ</span></li>
-                        <li><span>Android Studio Code</span></li>
-                        <li><span>iOS developer tools</span></li>
+                        <li><span>Android development tools</span></li>
+                        <li><span>iOS development tools</span></li>
+                        <li><span>Sublime Text with Plug-ings</span></li>
+                        <li><span>Visual Studio</span></li>
+                        <li><span>Team Foundation</span></li>
+                        <li><span>Adobe Programs</span></li>
                         <li><span>Sketch app</span></li>
                     </ul>
                 </div>
@@ -199,8 +208,6 @@
                     </h3>
                     <ul class="etc__list">
                         <li><span>Git</span></li>
-                        <li><span>Scrum master</span></li>
-                        <li><span>Math</span></li>
                     </ul>
                 </div>
             </div>
@@ -208,106 +215,106 @@
         </div>
     </section>
 
-    <!-- My work -->
+   <!-- My work -->
     <section id="work" class="section">
-        <div class="section__container">
-            <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn active">
-                All <span class="category__count">8</span>
-            </button>
-            <button class="category__btn">
-                Front-end <span class="category__count">3</span>
-            </button>
-            <button class="category__btn">
-                Back-end <span class="category__count">3</span>
-            </button>
-            <button class="category__btn">
-                Mobile <span class="category__count">2</span>
-            </button>
-        </div>
-        <div class="work__projects">
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project1.png" alt="1" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project2.png" alt="2" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project3.png" alt="3" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project4.png" alt="4" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project5.png" alt="5" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project6.png" alt="6" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project7.png" alt="7" class="project__img">
-                <div class="project__description">
-                    <h3>Github Site</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-            <a href="https://github.com/seungmai" class="project" target="_blank">
-                <img src="/image/projects/project1.png" alt="1" class="project__img">
-                <div class="project__description">
-                    <h3>Github</h3>
-                    <span>
-                        Clone coding with HTML and CSS
-                    </span>
-                </div>
-            </a>
-        </div>
-        </div>
+    <div class="section__container">
+    <h1>My work</h1>
+    <h3>Projects</h3>
+    <div class="work__categories">
+        <button class="category__btn active">
+            All <span class="category__count">8</span>
+        </button>
+        <button class="category__btn">
+            Front-end <span class="category__count">3</span>
+        </button>
+        <button class="category__btn">
+            Back-end <span class="category__count">3</span>
+        </button>
+        <button class="category__btn">
+            Mobile <span class="category__count">2</span>
+        </button>
+    </div>
+    <div class="work__projects">
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project1.png" alt="1" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project2.png" alt="2" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project3.png" alt="3" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project4.png" alt="4" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project5.png" alt="5" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project6.png" alt="6" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project7.png" alt="7" class="project__img">
+            <div class="project__description">
+                <h3>Github Site</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+        <a href="https://github.com/seungmai" class="project" target="_blank">
+            <img src="/image/projects/project1.png" alt="1" class="project__img">
+            <div class="project__description">
+                <h3>Github</h3>
+                <span>
+                    Clone coding with HTML and CSS
+                </span>
+            </div>
+        </a>
+    </div>
+    </div>
     </section>
 
-    <!-- Testimonials -->
+     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="section__container">
-            <h1>testimonials</h1>
+        <h1>testimonials</h1>
         <h3>see what they say about me</h3>
         <div class="testimonials">
             <div class="testimonial">
@@ -338,7 +345,7 @@
         </div>
     </section>
 
-    <!-- Contact -->
+     <!-- Contact -->
     <section id="contact" class="section">
         <h1 class="contact__title">
             Let's talk

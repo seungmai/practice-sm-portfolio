@@ -15,14 +15,14 @@
   --color-orange: #feb546;
   --color-black: #000000;
 
-  /* Font size */
+  /* Font Size */
   --font-large: 48px;
   --font-medium: 28px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
 
-  /* Font weight */
+  /* Font Weight */
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
@@ -34,7 +34,7 @@
   --animation-duration: 300ms;
 }
 
-/* Unniversal tag(공통적으로 적용해야 되는 것) */
+/* Unniversal tag */
 * {
   box-sizing: border-box;
 }
@@ -42,11 +42,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  cursor: default; /* 마우스를 위에 올려놨을 때 변동이 없는 것 */
 }
 
 a {
-  text-decoration: none; /* 앵커태그 밑줄없애는 것 */
+  text-decoration: none;
   color: var(--color-white);
 }
 
@@ -59,54 +58,64 @@ li {
 }
 
 button {
-  background-color: transparent; /* 색깔없음 */
+  background-color: transparent;
   cursor: pointer;
   border: none;
-  outline: none; /* 아웃라인 없애주기 */
+  outline: none;
 }
 
-/* Typography(패딩에 대해서 텍스트에 대해서 한번 스타일링을 먼저 해놓는 것)*/
+/* Typography */
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
-  margin: 8px 0px;
+  margin: 8px 0;
 }
 
 h3 {
-  font-size: (var(--font-regular));
-  font-weight: (var(--font-regular));
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 8px 0px;
+  margin: 8px 0;
 }
 
 p {
-  font-size: var(--font-regular);
-  font-weight: var(--font-regular);
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 4px 0px;
+  margin: 4px 0;
 }
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  /* navbar가 고정 */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-dark-grey);
-  align-items: center; /* 박스를 수직으로 중간에 정렬하고 싶을 때 */
+  /* 배경색이 없는 것 */
+  background-color: transparent;
+  align-items: center;
+  padding: 12px;
   color: var(--color-white);
-  padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-grey);
+  padding: 8px;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold); /* 글짜 굵기 */
+  font-weight: var(--weight-semi-bold);
 }
 
 .navbar__menu {
@@ -117,21 +126,20 @@ p {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-  /* 마우스를 위에 올려놨을 때 손가락모양으로 바뀜 */
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
-  border: 1px solid white;
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-white);
+  color: var(--color-black);
+  background-color: var(--color-light-grey);
 }
 
 .navbar__toggle-btn {
   position: absolute;
-  /* 앞쪽에다 배치 */
   top: 24px;
   right: 32px;
   font-size: 24px;
@@ -141,10 +149,10 @@ p {
 
 /* Home */
 #home {
-  background: url(/image/home-backgroound.png) center/cover;
-  /* 사진 중앙으로 위치하고 반응형이 되도록 cover사용 */
+  background: url(/image/home-backgroound.png) center/ cover;
   padding: 40px;
-  text-align: center; /* 모든 아이들을 중앙에 배치 */
+  padding-top: 120px;
+  text-align: center;
 }
 
 .home__avatar {
@@ -160,16 +168,16 @@ p {
 }
 
 .home__contact {
-  color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
+  color: var(--color-white);
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+  padding: 8px 12px;
+  margin: 24px 24px 0;
 }
 
-/* Section common(공통된 텍스트) */
+/* Section Common */
 .section {
   text-align: center;
   padding: 50px;
@@ -177,12 +185,11 @@ p {
 }
 
 .section__container {
-  max-width: 1200px; /* 보통 1000~1200px이 데스크탑에서 보기편한 사이즈이다. */
+  max-width: 1200px;
   margin: auto;
-  /* 중앙 배치 */
 }
 
-/* About */
+/* About me */
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -193,18 +200,16 @@ p {
   width: 170px;
   height: 170px;
   line-height: 170px;
-  /* 가운데 배치 */
   font-size: 70px;
   margin: auto;
   color: var(--color-dark-grey);
-  border: 1px solid var(--color-grey);
+  border: 2px solid var(--color-grey);
   border-radius: 50%;
   margin-bottom: 16px;
 }
 
 .major__icon i {
   transition: all var(--animation-duration) ease;
-  /* 애니메이션 이용할 때는 250~350ms가 가장 적당하다. */
 }
 
 .major__icon:hover i {
@@ -238,7 +243,7 @@ p {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
 }
 
 .job__name {
@@ -402,10 +407,11 @@ p {
   background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
+/*Testimonial */
 #testimonials {
   background-color: var(--color-light-white);
 }
+
 .testimonials {
   margin: 40px;
 }
@@ -428,6 +434,7 @@ p {
 .testimonial__avatar:nth-child(even) {
   margin-left: 40px;
 }
+
 .testimonial__speech-bubble {
   padding: 18px;
   background-color: var(--color-white);
@@ -462,7 +469,6 @@ p {
   margin: 24px 0;
   transition: all var(--animation-duration) ease-in;
 }
-
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-pink);
