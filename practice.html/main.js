@@ -29,7 +29,14 @@ navbarMenu.addEventListener('click', (event) => {
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact')
-})
+});
+
+//Make home slowly fade to transparant as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHight;
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
