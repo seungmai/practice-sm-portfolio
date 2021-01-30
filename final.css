@@ -102,6 +102,11 @@ p {
   padding: 12px;
 }
 
+#navbar.navbar--dark {
+  background-color: burlywood;
+  padding: 8px;
+}
+
 .navbar__logo {
   font-size: var(--font-large);
   font-weight: var(--weight-semi-bold);
@@ -115,6 +120,9 @@ p {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  color: bisque;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
@@ -123,6 +131,7 @@ p {
 }
 
 .navbar__menu__item:hover {
+  border: 1px solid var(--color-white);
   background-color: var(--color-light-grey);
   border-radius: var(--size-border-radius);
   color: var(--color-white);
@@ -355,6 +364,11 @@ p {
   transition: all var(--animation-duration) ease-in-out;
 }
 
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
+
 .project {
   position: relative;
   display: flex;
@@ -364,6 +378,10 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
@@ -384,7 +402,7 @@ p {
   left: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: all var(--animation-duration);
+  transition: all var(--animation-duration) ease-in;
 }
 
 .project:hover .project__description {
@@ -477,6 +495,26 @@ p {
   color: var(--color-orange);
 }
 
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   :root {
@@ -512,6 +550,10 @@ p {
     display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+  }
+
   .section {
     padding: 16px;
     padding-top: 40px;
@@ -540,11 +582,17 @@ p {
     flex-grow: 1;
   }
 
-  .testimonials {
-  }
-
   .testimonial__avatar {
     width: 120px;
     height: 120px;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
