@@ -1,3 +1,4 @@
+// 자바스크립트 복습 및 알던 모르던 주석달기!
 'use strict'
 
 // Make navbar transparent when it is on the top
