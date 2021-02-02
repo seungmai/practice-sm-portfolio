@@ -50,6 +50,21 @@ homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
+// const home = document.querySelector('.home__container');
+// const homeHeight = home.getBoundingClientRect().height;
+// document.addEventListener('scroll', () => {
+//     home.style.opacity = 1 - window.scrollY / homeHeight;
+// });
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+// 우리가 정의한 유틸리티 함수!
 function scrollIntoView(selector) { // 우리가 정한 그 이름(selctor)에 맞는 요소를 찾은 다음에 
     const scrollTo = document.querySelector(selector);// 요소를 찾은 다음에 
     scrollTo.scrollIntoView({behavior: "smooth"});// 스무스하게 이동하는 함수를 만들어 두었다.

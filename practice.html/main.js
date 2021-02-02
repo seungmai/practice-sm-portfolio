@@ -115,6 +115,7 @@ function selectNavItem(selected) {
     selectedNavItem.classList.add('active');
 }
 
+// 우리가 정의한 유틸리티 함수!
 function scrollIntoView(selector) { // 우리가 가장 쉬운 메소드로 한번 추출해본다 selector가 맞으면 이동할 수 있도록 
     const scrollTo = document.querySelector(selector); // 그 selector에 맞는 요소를 찾은 다음에 
     scrollTo.scrollIntoView({behavior: 'smooth'});// 스무스하게 이동하는 함수를 하나 만들어 놨다.
