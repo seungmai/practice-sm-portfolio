@@ -40,22 +40,22 @@ homeContactBtn.addEventListener('click', () => { // homeContactBtn에 addEventLi
 
 // Make home slowly fade to transparant as the window scrolls down
 const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll' , () => {
-    home.style.opacity = 1 - window.scrollY / homeHeight;
+const homeHeight = home.getBoundingClientRect().height; // #navbar 그리고 navbar의 height을 하려면 querySelector를 이용하게 되면 컨트롤 또는 커맨드를 이용해서 클릭하면 함수가 정의된 곳으로 갈 수 있다. 그래서 navbar에 querySelector를 이용해서 가져온 navbar요소의 높이를, 변수를 이용해서 할당한다. navbar에게 getBoundingClientRect()을 호출하면 여기안에 height가 있다.
+document.addEventListener('scroll' , () => { // document에 우리가 이벤트를 등록! scroll이 되면 우리가 원하는 함수를 호출해줘!
+    home.style.opacity = 1 - window.scrollY / homeHeight; // 윈도우에 스크롤이 점점 크면 클수록 homeheight이 800이고 스크롤이 800이되면  800/800은 1 그래ㅐ서 1 - 1은 0해서 불투명이 된다. home에 있는 스타일에 있는 opactity를 1 - window.scrollY / homeHeight해준다.
 });
 
-// Show "arrow up" button when scrolling down
+// Show "arrow up" button when scrolling down(스크롤이 내렬갈 때 버튼이 생기게 하는 것!)
 const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
-    if (window.scrollY > homeHeight / 2) {
-        arrowUp.classList.add('visible');
+document.addEventListener('scroll', () => { // document에 또다른 이벤트 리스너를 추가해서 스크롤이 될 때 우리가 원하는 함수를 호출할 것이다. 
+    if (window.scrollY > homeHeight / 2) { // window에 scrollY가 우리가 가지고 있는 homeHeight의 절반 정도로 이렇게 쭉 내려오면 
+        arrowUp.classList.add('visible'); // arrow-up에 있는 클래스를 추가해줄 것이다.
     } else {
-        arrowUp.classList.remove('visible');
+        arrowUp.classList.remove('visible'); // home에 가까워지면 제거!
     }
 });
 
-// Handle click on the "arrow up" button
+// Handle click on the "arrow up" button(스크롤을 누르면 home화면으로 이동!)
 arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });

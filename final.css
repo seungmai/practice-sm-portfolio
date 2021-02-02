@@ -511,6 +511,7 @@ p {
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
+  /* 클릭이 안되도록 설정! */
   transition: all 300ms ease-in;
 }
 
