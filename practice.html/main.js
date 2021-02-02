@@ -19,10 +19,10 @@ navbarMenu.addEventListener('click', (event) => { // navbarMenu에 이벤트를 
     const target = event.target; // target이라는 변수를 할당하고
     const link = target.dataset.link; // link라는 변수를 할당한 다음에 target에 있는 dataset에 있는 link!
     if (link === null) { // link가 없다면, link가 null이라면, undefined이거나 null이라면 아무것도 하지않고 
-        return;
+        return; // 우리가 원하는 data가 아닌 경우를 빨리 확인한 다음에 함수를 리턴하고 더 이상 밑에있는 코드가 실행이 되지 않도록 리턴이 되기 때문에 link가 있는 경우에만 밑에 아래코드가 수행이 될 것이다. 
     }
     navbarMenu.classList.remove('open');
-    scrollIntoView(link);
+    scrollIntoView(link); // scrollIntoView() 메소드는 scrollIntoView()가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다. scrollIntoView를 이용해서 우리가 지정한 link로 이동!
     selectNavItem(target);
 });
 
@@ -32,10 +32,10 @@ navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
-// Handle click on "contact me" button on home
-const homeContactBtn = document.querySelector('.home__contact');
-homeContactBtn.addEventListener('click', () => {
-    scrollIntoView('#contact')
+// Handle click on "contact me" button on home(contact me를 클릭하면 지정한 자리로 스므수하게 이동시키기!)
+const homeContactBtn = document.querySelector('.home__contact'); // homeContactBtn변수를 선언하고 document에 있는 querySelector를 이용해서 .home__contact을 받아온다. 
+homeContactBtn.addEventListener('click', () => { // homeContactBtn에 addEventListener을 추가하여 클릭할 수있도록 설정해준다.
+    scrollIntoView('#contact') // scrollIntoView를 하면 #contact에 가지도록 해준다.
 });
 
 // Make home slowly fade to transparant as the window scrolls down
@@ -115,9 +115,9 @@ function selectNavItem(selected) {
     selectedNavItem.classList.add('active');
 }
 
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+function scrollIntoView(selector) { // 우리가 가장 쉬운 메소드로 한번 추출해본다 selector가 맞으면 이동할 수 있도록 
+    const scrollTo = document.querySelector(selector); // 그 selector에 맞는 요소를 찾은 다음에 
+    scrollTo.scrollIntoView({behavior: 'smooth'});// 스무스하게 이동하는 함수를 하나 만들어 놨다.
     selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
