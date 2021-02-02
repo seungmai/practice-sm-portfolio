@@ -61,12 +61,12 @@ arrowUp.addEventListener('click', () => {
 });
 
 // Projects
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
-    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (filter == null) {
+const workBtnContainer = document.querySelector('.work__categories'); // work버튼이 들어있는 컨테이너는 document의 querySelector를 이용해서 .work__catagories를 할당한다.
+const projectContainer = document.querySelector('.work__projects'); // 프로젝트가 들어있는 컨테이너는 document의 querySelector를 이용해서 .work__projects를 할당한다. 
+const projects = document.querySelectorAll('.project'); // projects에는 document에 있는 querySelectorAll을 해서 우리가 원하는 전부 다 프로젝트들을 받아온다.
+workBtnContainer.addEventListener('click', (e) => { // workBtnContainer의 addEventListener를 이용해서 클릭이되면 우리가 원하는 함수를 출력한다.(e)이벤트 e를 받아온다.
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter; //이벤트 안에있는 타겟안에있는 데이터셋 안에 있는 필터값들을 받아올 것이다. || 만약 데이터셋에 필터가 없다면 앞에있는 애들은 falus가 된다. 텅텅 비어있는 undefined는 false랑 비슷하니까 여기에서 e.target에 있는 parentNode에 있는 dataset에 있는 필터값을 쓰겠다.
+    if (filter == null) { // 혹시모르니까 필터가 null이면 아무것도 해주지 않을 것이다. 
         return;
     }
 
@@ -79,12 +79,12 @@ target.classList.add('selected');
 
     projectContainer.classList.add('anim-out')
     setTimeout(() => {
-        projects.forEach((project) => {
+        projects.forEach((project) => { //projects array의 아이템을 forEach 하나당 각각 번갈아가면서 하나씩 우리가 해주는 것이다. 프로젝트를 받아온다. forEach는 뭐랑 같냐면 for(let project of projects)랑 똑같다. 또는 let project; for(let i = 0l i < projects.lenght; i++) { project = projects[i]; }와도 같다.
             console.log(project.dataset.type);
-            if(filter === '*' || filter === project.dataset.type) {
-                project.classList.remove('invisible');
-            } else {
-                project.classList.add('invisible');
+            if(filter === '*' || filter === project.dataset.type) { // 만약 로직은 우리가 선택한 필터가 전부다 보여져야 되는 All(*)이거나 아니면 filter가 아니면 project에 있는 dataset값의 type이 똑같으면 선택된거랑 똑같으면 
+                project.classList.remove('invisible'); //필터가 맞으면 invisible, 안보여주는 클래스를 빼고
+            } else { //만약 타입이 필터랑 동일하지 않으면 
+                project.classList.add('invisible'); // project 클래스에 안보여지는 클래스를 등록해준다. 
             }
         });
         projectContainer.classList.remove('anim-out');

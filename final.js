@@ -75,7 +75,24 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
-
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter === null) {
+        return;
+    }
+    console.log(filter);
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if (filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+});
 
 // 우리가 정의한 유틸리티 함수!
 function scrollIntoView(selector) { // 우리가 정한 그 이름(selctor)에 맞는 요소를 찾은 다음에 
@@ -102,3 +119,4 @@ function scrollIntoView(selector) { // 우리가 정한 그 이름(selctor)에 �
 //     const scrollTo = document.querySelector(selector);
 //     scrollTo.scrollIntoView({behavior: "smooth"});
 // }
+
