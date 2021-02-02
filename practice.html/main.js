@@ -13,12 +13,12 @@ document.addEventListener('scroll', () => { //EventListener를 document에 먼�
     }
 });
 
-// Handle scrolling when tapping on the navbar menu
-const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener('click', (event) => {
-    const target = event.target;
-    const link = target.dataset.link;
-    if (link === null) {
+// Handle scrolling when tapping on the navbar menu(navbar menu를 누르면 자연스럽게 그 위치로 스크롤링이 되도록 만들어라!)
+const navbarMenu = document.querySelector('.navbar__menu'); // navbarMenu를 선언하고 document의 querySelector를 이용해서 .navbar__menu라는 변수를 할당한다.
+navbarMenu.addEventListener('click', (event) => { // navbarMenu에 이벤트를 추가해준다. click이 되면 우리가 등록한 함수가 호출되게 한다. 그리고 보통은 클릭이되면 클릭한 이벤트가 들어오게 된다. 
+    const target = event.target; // target이라는 변수를 할당하고
+    const link = target.dataset.link; // link라는 변수를 할당한 다음에 target에 있는 dataset에 있는 link!
+    if (link === null) { // link가 없다면, link가 null이라면, undefined이거나 null이라면 아무것도 하지않고 
         return;
     }
     navbarMenu.classList.remove('open');
