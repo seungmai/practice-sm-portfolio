@@ -72,9 +72,9 @@ workBtnContainer.addEventListener('click', (e) => { // workBtnContainer의 addEv
 
 // Remove selection from the previous item and select the new one
 const active = document.querySelector('.category__btn.selected'); // active를 선언하고 document에 있는 querySelector을 이용하여 .category__btn.selected를 가지고 온다.
-active.classList.remove('selected');
-const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
-target.classList.add('selected');
+active.classList.remove('selected'); // active.classList를 remove를 이용해서 selected를 없애줄 것이다.
+const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode; // target을 선언하고 const target에 e.target 지금 target에 nodeName이, 지금 클릭된 target의 nodeName이 Button이면 e.target 이거 그대로 쓰고  만약에 버튼이아니다 하면 e.target에 있는 papentNode에 target을 지정해 줄 것이다.
+target.classList.add('selected'); // target에 있는 클래스리스트에 있는 selected를 추가한다.
 
 
     projectContainer.classList.add('anim-out') // projectContainer자체에 classList를 추가한다. anim-out을 추가를 해서 anim-out이 등록이되면 나갈수있도록해준다.
