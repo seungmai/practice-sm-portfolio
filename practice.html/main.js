@@ -27,9 +27,9 @@ navbarMenu.addEventListener('click', (event) => { // navbarMenu에 이벤트를 
 });
 
 // Navbar toggle button for small screen
-const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-navbarToggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open');
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn'); // navbarToggleBtn을 선언한다음에 document에 quertSelector을 이용해서 .navbar__toggle-btn를 받아온다.
+navbarToggleBtn.addEventListener('click', () => { // navbarToggleBtn에 addEventListener를 받아온다음에 여기서 클릭이되면 우리가 원하는 함수를 호출할 수 있도록 등록한다.
+    navbarMenu.classList.toggle('open'); // navbarMenu에 classList toggle을 오픈해준다.
 });
 
 // Handle click on "contact me" button on home(contact me를 클릭하면 지정한 자리로 스므수하게 이동시키기!)
