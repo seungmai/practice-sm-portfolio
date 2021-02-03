@@ -77,8 +77,8 @@ const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
 target.classList.add('selected');
 
 
-    projectContainer.classList.add('anim-out')
-    setTimeout(() => {
+    projectContainer.classList.add('anim-out') // projectContainer자체에 classList를 추가한다. anim-out을 추가를 해서 anim-out이 등록이되면 나갈수있도록해준다.
+    setTimeout(() => { // setTimeout이 되면 우리가 등록한 함수를 불러줘!
         projects.forEach((project) => { //projects array의 아이템을 forEach 하나당 각각 번갈아가면서 하나씩 우리가 해주는 것이다. 프로젝트를 받아온다. forEach는 뭐랑 같냐면 for(let project of projects)랑 똑같다. 또는 let project; for(let i = 0l i < projects.lenght; i++) { project = projects[i]; }와도 같다.
             console.log(project.dataset.type);
             if(filter === '*' || filter === project.dataset.type) { // 만약 로직은 우리가 선택한 필터가 전부다 보여져야 되는 All(*)이거나 아니면 filter가 아니면 project에 있는 dataset값의 type이 똑같으면 선택된거랑 똑같으면 
@@ -88,7 +88,7 @@ target.classList.add('selected');
             }
         });
         projectContainer.classList.remove('anim-out');
-    }, 300);
+    }, 300); // 그리고 300ms 뒤에 우리에 함수를 불러줘! //브라우저야 안에있는 것이 실행된 다음에 0.3초뒤에 우리의 함수를 불러줘!
 });
 
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다.

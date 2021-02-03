@@ -83,7 +83,8 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter === null) {
         return;
     }
-    console.log(filter);
+projectContainer.classList.add('anim-out')
+setTimeout(() => {
     projects.forEach((project) => {
         console.log(project.dataset.type);
         if (filter === '*' || filter === project.dataset.type) {
@@ -92,6 +93,8 @@ workBtnContainer.addEventListener('click', (e) => {
             project.classList.add('invisible');
         }
     });
+    projectContainer.classList.remove('anim-out');
+}, 300);
 });
 
 // 우리가 정의한 유틸리티 함수!
