@@ -71,7 +71,7 @@ workBtnContainer.addEventListener('click', (e) => { // workBtnContainer의 addEv
     }
 
 // Remove selection from the previous item and select the new one
-const active = document.querySelector('.category__btn.selected');
+const active = document.querySelector('.category__btn.selected'); // active를 선언하고 document에 있는 querySelector을 이용하여 .category__btn.selected를 가지고 온다.
 active.classList.remove('selected');
 const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
 target.classList.add('selected');
